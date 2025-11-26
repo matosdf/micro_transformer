@@ -1,7 +1,7 @@
 
-dev.off(dev.list()["RStudioGD"])  
-rm(list=ls())                       
-cat("\f")
+#dev.off(dev.list()["RStudioGD"])  
+#rm(list=ls())                       
+#cat("\f")
 
 # CARREGAR OS DADOS E GERAR A FUNÇÃO GETBATCH    ----
 
@@ -9,7 +9,7 @@ library(torch)
 library(dotty)
 
 
-data <- readr::read_file("D://MAURI/2025/CURSOS/PO_249___2025/AULA___11/machado.txt")
+data <- readr::read_file("C:/Users/matos/OneDrive/Área de Trabalho/Programacao/micro_transformer/machado.txt")
 
 stringr::str_sub(data, 100, 1000)
 
@@ -301,7 +301,7 @@ m <- GPT(
 )
 
 system.time(
-  treinar(m, steps = 10000, block_size = 256, batch_size = 64)
+  treinar(m, steps = 10, block_size = 256, batch_size = 64)
             )
 
 
